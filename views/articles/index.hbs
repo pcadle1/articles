@@ -1,16 +1,17 @@
 <h1 class = 'header'>Articles</h1>
+<div class = 'nav'>
+    <a class = 'navlink' href="/articles/new">Add New Article</a>
+</div>
 {{#each articles}}
     <div class = "anArticle">
         <h3 class = 'title'>{{this.title}}</h3>
-        <p><a href="{{this.url}}" target="_blank">{{this.url}}</a></p>
+        <hr>
+        <p><a class = 'link' href="{{this.url}}" target="_blank">{{this.url}}</a></p>
         {{#if this.description}}
-        <p>Description: {{this.description}}</p>
+        <p class = 'description'>Description: {{this.description}}</p>
         {{/if}}
     </div>
 {{/each}}
-<div>
-    <a href="/articles/new">Add a new article</a>
-</div>
-<div>
-    <a href="/articles/page/{{page}}">Next 10 Articles</a>
+<div class = 'nav'>
+    <a class = 'navlink' href="/articles/page/{{page}}">Next 10 Articles</a>
 </div>
